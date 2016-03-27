@@ -17,7 +17,7 @@ class SearchBar extends Component {
   onFormSubmit(event) {
     event.preventDefault();
     this.props.fetchWeatherData(this.state.term);
-    this.setState({ term: ''} );
+    this.setState({ term: '' });
   }
 
   render() {
@@ -32,7 +32,8 @@ class SearchBar extends Component {
           className="form-control"
           placeholder="Enter a city for a weather forecast"
           onChange={ this.onInputChange.bind(this) }
-      />
+          autoFocus
+        />
       <span className="input-group-btn">
       <button type="submit" className="btn btn-default">Search</button>
       </span>

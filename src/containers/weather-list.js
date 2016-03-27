@@ -9,13 +9,13 @@ class WeatherList extends Component {
     const humidities = cityData.list.map(weather => weather.main.humidity);
     const pressures = cityData.list.map(weather => weather.main.pressure);
 
-    const CELL_HEIGHT = 220;
+    const CELL_HEIGHT = 290;
 
     return (
       <tr key={cityData.city.id}>
-      <td>
+      <td className="text-center">
       <GoogleMap city={cityData.city.name} country={cityData.city.country} size={CELL_HEIGHT}/>
-    <div className="text-center">{cityData.city.name} ({cityData.city.country})</div>
+    <h4><span className="label label-default">{cityData.city.name} ({cityData.city.country})</span></h4>
   </td>
   <td><Chart colour="blue" data={temps} units="&deg;C" height={CELL_HEIGHT} /></td>
 <td><Chart colour="green" data={pressures} units="hPa" height={CELL_HEIGHT} /></td>
