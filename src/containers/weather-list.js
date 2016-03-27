@@ -17,7 +17,7 @@ class WeatherList extends Component {
       <GoogleMap city={cityData.city.name} country={cityData.city.country} size={CELL_HEIGHT}/>
     <div className="text-center">{cityData.city.name} ({cityData.city.country})</div>
   </td>
-  <td><Chart colour="blue" data={temps} units="°C" height={CELL_HEIGHT} /></td>
+  <td><Chart colour="blue" data={temps} units="&deg;C" height={CELL_HEIGHT} /></td>
 <td><Chart colour="green" data={pressures} units="hPa" height={CELL_HEIGHT} /></td>
 <td><Chart colour="black" data={humidities} units="%" height={CELL_HEIGHT} /></td>
 </tr>
