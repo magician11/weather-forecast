@@ -7,8 +7,11 @@ export default (props) => {
   const MAP_TYPE = 'satellite';
   const SIZE = `${props.size}x${props.size}`;
   const STATIC_MAP_URL = `${BASE_URL}?map_type=${MAP_TYPE}&key=${API_KEY}&center=${props.city},${props.country}&zoom=${ZOOM_LEVEL}&size=${SIZE}`;
+  const GOOGLE_MAP_SEARCH_URL = `https://www.google.com/maps/place/${props.city},${props.country}`;
 
   return (
-    <img src={STATIC_MAP_URL} />
+    <a href={GOOGLE_MAP_SEARCH_URL}>
+      <img src={STATIC_MAP_URL} />
+    </a>
   );
 };
